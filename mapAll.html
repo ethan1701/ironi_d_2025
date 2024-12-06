@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="contacts.css"/>
+  <link rel="icon" type="image/png" href="images/logo_ahavat_tziyon_sm.png" />
+  <title>דף קשר א'3 תשע"ט</title>
+</head>
+<body onload = "loadMap();">
+	<script src="https://maps.googleapis.com/maps/api/js?callbac=drawMap&key=AIzaSyDVLs9Ns9jb8RyCf8haWZS5JYLfdiP2vDk"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="maps2.js"></script>
+	<script src="highlight.js"></script>
+	<script src="loadXHR.js"></script>
+	<!--script src="QrCode.js"></script-->
+	<script src="vcard.js"></script>
+	<script src="mapAll.js"></script>
+    <script src="https://spreadsheets.google.com/feeds/cells/1UX5RQt0-PZAnzXio299JMigi7ijcUnWfHEgRyyOjkjo/2/public/values?alt=json-in-script&callback=doData"></script>
+    <div id="wrapper">
+        <div id="top">
+            <H1>
+				דף קשר א'3 תשע"ט
+				<input type="text" id="filter" onkeyup="filterKids()" placeholder="סינון">
+			</H1>
+        </div>
+        <div id="body" class="dynamic">
+            <div id = "GoogleMap" style="min-height:600px;" class = "GoogleMap">
+        </div>
+    </div>
+    <div id="footer">
+    <div id="infooter">
+      &copy; איתן שלו
+          <br />שמור כ:<a href="https://docs.google.com/spreadsheets/d/1UX5RQt0-PZAnzXio299JMigi7ijcUnWfHEgRyyOjkjo/export?format=xlsx&id=1UX5RQt0-PZAnzXio299JMigi7ijcUnWfHEgRyyOjkjo&gid=60043056" class="xls">xlsx
+          </a>
+          <a href="https://docs.google.com/spreadsheets/d/1UX5RQt0-PZAnzXio299JMigi7ijcUnWfHEgRyyOjkjo/export?format=pdf&id=1UX5RQt0-PZAnzXio299JMigi7ijcUnWfHEgRyyOjkjo&gid=60043056&portrait=false&size=A4&fitw=true&sheetnames=true&printtitle=false" class="pdf">pdf
+          </a>
+        </div>
+    </div>
+</body>
+</html>

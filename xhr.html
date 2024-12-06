@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="loadXHR.js" type="application/javascript"></script>
+<script>
+    loadXHR("https://ethan1701.github.io/ahavat-tzion-2025/images/DOB-icon.png").then(function(blob) {
+  var reader = new window.FileReader();
+  reader.readAsDataURL(blob);
+
+  reader.onloadend = function () {
+    console.log(reader.result);
+  }
+})
+</script>
+
+</body>
+</html>

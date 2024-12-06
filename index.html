@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="contacts.css"/>
+  <link rel="icon" type="image/png" href="images/logo-ahavat-tzion-512x512.png" />
+  <title>דף קשר א'4 תשפ"ה</title>
+</head>
+<body>
+	<script src="https://maps.googleapis.com/maps/api/js?callbac=drawMap&key=AIzaSyDVLs9Ns9jb8RyCf8haWZS5JYLfdiP2vDk"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="maps.js"></script>
+	<script src="highlight.js"></script>
+	<script src="loadXHR.js"></script>
+	<!--script src="QrCode.js"></script-->
+	<script src="vcard.js"></script>
+	<script src="showKids.js"></script>
+    <!--script src="https://spreadsheets.google.com/feeds/cells/1UX5RQt0-PZAnzXio299JMigi7ijcUnWfHEgRyyOjkjo/2/public/values?alt=json-in-script&callback=doData"></script-->
+    <div id="wrapper">
+        <div id="top">
+            <H1>
+		דף קשר א'4 תשפ"ה
+		<input type="text" id="filter" onkeyup="filterKids()" placeholder="סינון">
+		<img src="images/2025-ahavat-tzion-qr.png" id="page_qr" />
+	    </H1>
+        </div>
+        <div id="detailsContainer" class="dynamic">
+            <span id="close" onclick="hideDetails()" title="סגור">סגור</span>
+            <div id="details"></div>
+        </div>
+        <div id="body" class="dynamic">
+            <div id="data" data-role="page"></div>
+        </div>
+    </div>
+    <div id="footer">
+    <div id="infooter">
+      &copy; איתן שלו
+          <br />שמור כ:<a href="https://docs.google.com/spreadsheets/d/1-qcyzuIzCxYypXnDvzkTpOmPD1wOmmgJ1hkoBl63DyM/export?format=xlsx&id=1-qcyzuIzCxYypXnDvzkTpOmPD1wOmmgJ1hkoBl63DyM&gid=416619366" class="xls">xlsx
+          </a>
+          <a href="https://docs.google.com/spreadsheets/d/1-qcyzuIzCxYypXnDvzkTpOmPD1wOmmgJ1hkoBl63DyM/export?format=pdf&id=1-qcyzuIzCxYypXnDvzkTpOmPD1wOmmgJ1hkoBl63DyM&gid=416619366&portrait=false&size=A4&fitw=true&sheetnames=true&printtitle=false" class="pdf">pdf
+          </a>
+        </div>
+    </div>
+</body>
+</html>
