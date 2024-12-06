@@ -142,13 +142,13 @@ function showDetails(kid) {
 	details.append(info);
 	info.append(name);
 	
-	if(kid["child phone"] != ""){
+	if(kid["child phone"] != null && kid["child phone"] != ""){
 		var phone = $("<div class='phone'/>")
 		phone.append(getContactInfo(kid["child phone"], "phone"));
 		info.append(phone);
 	}
 
-	if(kid["child email"] != ""){
+	if(kid["child email"] != null && kid["child email"] != ""){
 		var email = $("<div class='email'/>")
 		email.append(getContactInfo(kid["child email"], "email"));
 		info.append(email);
