@@ -239,6 +239,8 @@ function drawDetails(form, kid) {
 	var info = $("<div class='info'/>");
 	var address = $("<div class='address' title='כתובת'/>");
 	var dob = $("<div class='dob' title='תאריך לידה'/>");
+	var phone = $("<div class='phone'/>").append(getContactInfo(kid["child phone"], "phone"));
+	var email = $("<div class='email'/>").append(getContactInfo(kid["child email"], "email"));
 	var contact = $("<div class='contact'/>");
 	var parent1 = $("<div class='parent  parent1'/>");
 	var parent2 = $("<div class='parent  parent2'/>");
@@ -250,7 +252,9 @@ function drawDetails(form, kid) {
 	div.append(contact);
 	name.append(kid["Full Name"]);
 	
-	
+
+	info.append(phone);
+	info.append(email);
 	var dateString = toHumanDate(new Date(kid["DOB"]));
 	if(dateString){
 		dob.append(dateString);
