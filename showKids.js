@@ -143,15 +143,11 @@ function showDetails(kid) {
 	info.append(name);
 	
 	if(kid["child phone"] != null && kid["child phone"] != ""){
-		var phone = $("<div class='phone'/>")
-		phone.append(getContactInfo(kid["child phone"], "phone"));
-		info.append(phone);
+		info.append(getContactInfo(kid["child phone"], "phone"));
 	}
 
 	if(kid["child email"] != null && kid["child email"] != ""){
-		var email = $("<div class='email'/>")
-		email.append(getContactInfo(kid["child email"], "email"));
-		info.append(email);
+		info.append(getContactInfo(kid["child email"], "email"));
 	}
 
 	var dateString = toHumanDate(new Date(kid["DOB"]));
