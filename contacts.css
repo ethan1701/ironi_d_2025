@@ -326,7 +326,7 @@ h1 {
 }
 
 @media screen{
-	#data .kid .info .phone, #details .kid .info .email{
+	#data .kid .info .phone, #data .kid .info .email{
 		display: none;
 	}
 }
