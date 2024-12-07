@@ -46,7 +46,7 @@ function createVcard(kid, includePic) {
 		version: "3.0",
 		n: kid["Last_Name"] + ";" + kid["First_Name"] + ";",
 		fn: kid["Full Name"],
-		org: "אהבת ציון א4",
+		org: "עירוני ד' ז'5",
 		adr: [],
 		tel: [],
 		email: []
@@ -65,44 +65,16 @@ function createVcard(kid, includePic) {
 	}
 
 	// add each phone and email that exists
-	if ("Parent 1 phone" in kid) {
-		var typeVal = "CELL";
-		if(kid["Parent1 Full Name"].trim() != ""){
-			typeVal += ",X-" + kid["Parent1 Full Name"]
-		}
+	if ("child phone" in kid) {
 		vcard.tel.push({
-			value: kid["Parent 1 phone"],
-			type: typeVal
+			value: kid["child phone"],
+			type: "CELL"
 		});
 	}
-	if ("Parent 2 phone" in kid) {
-		var typeVal = "CELL";
-		if(kid["Parent2 Full Name"].trim() != ""){
-			typeVal += ",X-" + kid["Parent2 Full Name"]
-		}
-		vcard.tel.push({
-			value: kid["Parent 2 phone"],
-			type: typeVal
-		});
-	}
-	if ("Parent 1 Email" in kid) {
-		var typeval = "HOME";
-		if(kid["Parent1 Full Name"].trim() != ""){
-			typeval += ",X-" + kid["Parent1 Full Name"];
-		}
+	if ("child email" in kid) {
 		vcard.email.push({
-			value: kid["Parent 1 Email"],
-			type: typeval
-		});
-	}
-	if ("Parent 2 Email" in kid) {
-		var typeval = "HOME";
-		if(kid["Parent2 Full Name"].trim ()!= ""){
-			typeval += ",X-" + kid["Parent2 Full Name"];
-		}
-		vcard.email.push({
-			value: kid["Parent 2 Email"],
-			type: typeval
+			value: kid["child email"],
+			type: "HOME"
 		});
 	}
 
