@@ -235,6 +235,13 @@ function drawDetails(form, kid) {
 		dob.append(dateString);
 		info.append(dob);
 	}
+	if(kid["child phone"] != null && kid["child phone"] != ""){
+		info.append(getContactInfo(kid["child phone"], "phone"));
+	}
+
+	if(kid["child email"] != null && kid["child email"] != ""){
+		info.append(getContactInfo(kid["child email"], "email"));
+	}	
 	
 	if(kid["Address"] != ""){
 		address.append(kid["Address"].replace("\n", "<br />"));
