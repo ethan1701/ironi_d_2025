@@ -494,7 +494,7 @@ h1 {
     }
     .kidContainer{
         page-break-inside: avoid;
-        width: 5.1cm;
+        width: 5.0cm;
         height: 3.2cm;
     	font-size: 64%;
     	line-height: 100%;
