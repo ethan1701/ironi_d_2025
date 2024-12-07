@@ -325,6 +325,12 @@ h1 {
 	padding: 7px;
 }
 
+@media screen{
+	#details .kid .info .phone, #details .kid .info .email{
+		display: none;
+	}
+}
+
 @media screen and (max-width:1080px){
     body{
         font-size: x-large;
